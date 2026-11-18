@@ -1,0 +1,112 @@
+{
+ "model": "google-t5/t5-small",
+ "task": "summarization",
+ "method": "gradient",
+ "n_eval": 300,
+ "n_train": 8000,
+ "epochs": 1,
+ "lr": 0.0001,
+ "batch_size": 8,
+ "runs": [
+  {
+   "target": 0.0,
+   "sparsity": 0.0,
+   "before": {
+    "rouge1": 38.35686979461755,
+    "rouge2": 16.945752584533597,
+    "rougeL": 26.921092703094804
+   },
+   "after": {
+    "rouge1": 41.12382425371918,
+    "rouge2": 19.348537101863446,
+    "rougeL": 28.890539743157532
+   },
+   "train": {
+    "steps": 1000,
+    "train_seconds": 376.0,
+    "loss_first100": 2.29544659614563,
+    "loss_last100": 2.1130885326862336
+   },
+   "examples": [
+    "Massey Shaw was requisitioned from the London Fire Brigade in 1940. It was transported to Dunkirk to help with the evacuation of Allied troops in the face of the Nazi advance. After carrying 600 soldiers back to Britain, it returned to London where it helped to save St Paul's Cathedral and other buildings damaged in the Blitz.",
+    "Didier Drogba has scored 15 goals in 15 games for Chelsea against Arsenal. Ivorian striker has a formidable scoring record of 13 goals in 14 games. He averages a goal every 78 minutes and 20 seconds against his team. But he might have celebrated too soon.",
+    "Prince Harry took part in exercises with Royal Australian Artillery troops in Darwin. The 30-year-old is due to leave the British military in June after 10 years. He is expected to spend several weeks on conservation project in Africa."
+   ]
+  },
+  {
+   "target": 0.4,
+   "sparsity": 0.4027777777777778,
+   "before": {
+    "rouge1": 34.79545654420919,
+    "rouge2": 13.584761660757682,
+    "rougeL": 23.39589441013376
+   },
+   "after": {
+    "rouge1": 39.56887529775192,
+    "rouge2": 17.71051711616745,
+    "rougeL": 27.311803689252677
+   },
+   "train": {
+    "steps": 1000,
+    "train_seconds": 320.2,
+    "loss_first100": 3.011932981014252,
+    "loss_last100": 2.5826840567588807
+   },
+   "examples": [
+    "Fire boat Massey Shaw was requisitioned from the London Fire Brigade in 1940. The boat returned to London to save St Paul's Cathedral and other buildings damaged in the Blitz. After carrying 600 soldiers back to Britain, the boat went out of service in 1971 and four decades was used as a walkway in a London dock, allowing people to get to other bessels.",
+    "Didier Drogba has 15 goals in 15 games for Chelsea against Arsenal. The Ivorian striker has a formidable scoring record of 13 goals in 14 games. Wenger said: 'I don\u2019t know how much Chelsea miss him but we don't miss him'",
+    "Prince, 30, took part in exercises with Royal Australian Artillery troops in Darwin. He is due to leave the British military in June after 10 years' service. Harry's participation in the exercises follows his visit to Kununurra region of Western Australia."
+   ]
+  },
+  {
+   "target": 0.5,
+   "sparsity": 0.5,
+   "before": {
+    "rouge1": 31.68458396397615,
+    "rouge2": 11.05749322535331,
+    "rougeL": 20.531039195221258
+   },
+   "after": {
+    "rouge1": 39.060925121468514,
+    "rouge2": 17.445424115778813,
+    "rougeL": 27.12752851761325
+   },
+   "train": {
+    "steps": 1000,
+    "train_seconds": 299.5,
+    "loss_first100": 3.30181410074234,
+    "loss_last100": 2.7168461418151857
+   },
+   "examples": [
+    "Fire boat Massey Shaw was requisitioned from the London Fire Brigade in 1940. The boat returned to London to save St Paul's Cathedral and other buildings damaged in the Blitz. It went out of service in 1971 and four decades was used as a walkway in a London dock, allowing people to get to other bessels.",
+    "Didier Drogba left Chelsea for Shanghai Shenhua in 2012. The Ivorian striker has 13 goals in 14 games for Chelsea against Arsenal. He scored both goals in the 2005 Community Shield.",
+    "Prince Harry is pictured taking part in exercises with Royal Australian Air Force's Tiger assault helicopter. Harry's participation follows his visit to the remote Kununurra region of Western Australia. The 30-year-old will spend several weeks on a conservation project in Africa."
+   ]
+  },
+  {
+   "target": 0.6,
+   "sparsity": 0.5972222222222222,
+   "before": {
+    "rouge1": 23.722660216373654,
+    "rouge2": 5.590682875800608,
+    "rougeL": 15.699393285233747
+   },
+   "after": {
+    "rouge1": 37.73590756952079,
+    "rouge2": 16.150798258982437,
+    "rougeL": 25.91764416625478
+   },
+   "train": {
+    "steps": 1000,
+    "train_seconds": 268.4,
+    "loss_first100": 3.853101933002472,
+    "loss_last100": 2.965139491558075
+   },
+   "examples": [
+    "Massey Shaw was requisitioned from the London Fire Brigade in 1940. The boat was transported to London to save 600 troops from the Blitz. It was restored to its former glory seven decades before it was restored by a National Lottery grant.",
+    "Didier Drogba scored 13 goals in 14 games against Arsenal. The Ivorian striker has 15 goals in 15 games for Chelsea against Arsenal in the Premier League.",
+    "Prince Harry has lost none of his military skills on what are expected to be the last manoeuvres of his ten-year military career. Prince Harry is expected to spend several weeks on a conservation programme in Australia."
+   ]
+  }
+ ]
+}

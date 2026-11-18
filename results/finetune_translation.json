@@ -1,0 +1,104 @@
+{
+ "model": "google-t5/t5-small",
+ "task": "translation",
+ "method": "gradient",
+ "n_eval": 500,
+ "n_train": 20000,
+ "epochs": 1,
+ "lr": 0.0001,
+ "batch_size": 32,
+ "runs": [
+  {
+   "target": 0.0,
+   "sparsity": 0.0,
+   "before": {
+    "bleu": 25.491092424075322,
+    "chrf": 55.61505275252502
+   },
+   "after": {
+    "bleu": 25.797490231775868,
+    "chrf": 55.7978153119716
+   },
+   "train": {
+    "steps": 625,
+    "train_seconds": 272.4,
+    "loss_first100": 0.6186627042293549,
+    "loss_last100": 0.6025208204984664
+   },
+   "examples": [
+    "Totul a progresat \u00een lini\u015fte de la un sezon la altul.",
+    "El a fost fondatorul Partidului Mare din Rom\u00e2nia, fost membru al Parlamentului European \u015fi fost senator.",
+    "\"Nu este deloc motivant pentru mine s\u0103 am o hart\u0103\", a declarat el."
+   ]
+  },
+  {
+   "target": 0.4,
+   "sparsity": 0.4027777777777778,
+   "before": {
+    "bleu": 22.81433392063296,
+    "chrf": 52.59038043879818
+   },
+   "after": {
+    "bleu": 24.795232216758688,
+    "chrf": 54.969460723110544
+   },
+   "train": {
+    "steps": 625,
+    "train_seconds": 235.3,
+    "loss_first100": 0.905242673754692,
+    "loss_last100": 0.797356566786766
+   },
+   "examples": [
+    "Totul a progresat \u00een t\u0103cere de la un sezon la altul.",
+    "El a fost fondatorul Partidului Mare din Rom\u00e2nia, fost membru al Parlamentului European \u015fi fost senator.",
+    "\"Nu este deloc motivant pentru mine s\u0103 am o hart\u0103\", a afirmat el."
+   ]
+  },
+  {
+   "target": 0.5,
+   "sparsity": 0.5,
+   "before": {
+    "bleu": 20.03854970143489,
+    "chrf": 49.099362834940244
+   },
+   "after": {
+    "bleu": 23.454559717432748,
+    "chrf": 53.56035171743431
+   },
+   "train": {
+    "steps": 625,
+    "train_seconds": 226.2,
+    "loss_first100": 1.1722305250167846,
+    "loss_last100": 0.9547805100679397
+   },
+   "examples": [
+    "Totul a progresat \u00een lini\u015fte de la un sezon la altul.",
+    "El a fost fondatorul Partidului Mare din Rom\u00e2nia, fost membru al Parlamentului European \u015fi fost senator.",
+    "\"Nu este deloc motivant pentru mine s\u0103 am o hart\u0103\", a afirmat el."
+   ]
+  },
+  {
+   "target": 0.6,
+   "sparsity": 0.5972222222222222,
+   "before": {
+    "bleu": 9.501961178255392,
+    "chrf": 32.081297001529265
+   },
+   "after": {
+    "bleu": 21.738837158632418,
+    "chrf": 51.892434778232065
+   },
+   "train": {
+    "steps": 625,
+    "train_seconds": 218.2,
+    "loss_first100": 1.6488055336475371,
+    "loss_last100": 1.1441679912805558
+   },
+   "examples": [
+    "Totul a progresat \u00een lini\u015fte de la un sezon la altul.",
+    "El a fost fondatorul Partidului Mare din Rom\u00e2nia, fost membru al Parlamentului European \u015fi fost senator.",
+    "\"Nu este motivant pentru mine s\u0103 am o hart\u0103\", a afirmat el."
+   ]
+  }
+ ]
+}

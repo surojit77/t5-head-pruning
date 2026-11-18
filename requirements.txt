@@ -1,0 +1,8 @@
+torch>=2.2
+transformers>=5.0
+datasets>=3.0
+sacrebleu>=2.4
+rouge_score>=0.1.2
+sentencepiece
+matplotlib
+numpy

@@ -1,0 +1,90 @@
+{
+ "model": "google-t5/t5-small",
+ "task": "summarization",
+ "device": "cuda",
+ "gpu": "Tesla T4",
+ "dtype": "torch.float32",
+ "src_len": 128,
+ "new_tokens": 64,
+ "dense": {
+  "total_params": 60506624,
+  "attention_params": 18874368,
+  "weights_mb": 230.814453125,
+  "gflops_forward": 10.913579008,
+  "bs1": {
+   "latency_ms": 583.0751030000556,
+   "latency_ms_std": 4.4530735613084405,
+   "tokens_per_s": 109.76287560677049,
+   "peak_mem_mb": 244.708984375,
+   "encoder_ms": 5.416692500148201
+  },
+  "bs16": {
+   "latency_ms": 598.1349425001099,
+   "latency_ms_std": 10.236262746217067,
+   "tokens_per_s": 1711.9882609095553,
+   "peak_mem_mb": 327.92333984375,
+   "encoder_ms": 27.278331000161415
+  }
+ },
+ "masked": {
+  "target": 0.4,
+  "total_params": 60506624,
+  "attention_params": 18874368,
+  "weights_mb": 230.814453125,
+  "gflops_forward": 10.913579008,
+  "bs1": {
+   "latency_ms": 632.7976070001569,
+   "latency_ms_std": 7.738075218702717,
+   "tokens_per_s": 101.13818271753378,
+   "peak_mem_mb": 244.71044921875,
+   "encoder_ms": 5.772550999836312
+  },
+  "bs16": {
+   "latency_ms": 648.5049790001085,
+   "latency_ms_std": 10.713485110760075,
+   "tokens_per_s": 1579.0164041282228,
+   "peak_mem_mb": 327.62060546875,
+   "encoder_ms": 27.783504500121126
+  }
+ },
+ "pruned": [
+  {
+   "target": 0.4,
+   "sparsity": 0.4027777777777778,
+   "sweep_metrics": {
+    "rouge1": 34.79545654420919,
+    "rouge2": 13.584761660757682,
+    "rougeL": 23.39589441013376,
+    "eval_seconds": 47.0
+   },
+   "total_params": 52904448,
+   "attention_params": 11272192,
+   "weights_mb": 201.814453125,
+   "gflops_forward": 9.44242688,
+   "bs1": {
+    "latency_ms": 611.9982140000957,
+    "latency_ms_std": 18.700683965357154,
+    "tokens_per_s": 104.57546858133477,
+    "peak_mem_mb": 214.1171875,
+    "encoder_ms": 5.90519200000017,
+    "speedup": 0.9527398767865758
+   },
+   "bs16": {
+    "latency_ms": 643.3811870001591,
+    "latency_ms_std": 8.723709252045577,
+    "tokens_per_s": 1591.5914557193087,
+    "peak_mem_mb": 268.93408203125,
+    "encoder_ms": 25.81073400006062,
+    "speedup": 0.9296742811038426
+   },
+   "verify_metrics": {
+    "rouge1": 36.23353663235624,
+    "rouge2": 14.744852172838597,
+    "rougeL": 24.28148226149928
+   },
+   "param_reduction_pct": 12.564204540646662,
+   "attn_param_reduction_pct": 40.27777777777778,
+   "flop_reduction_pct": 13.480015372790167
+  }
+ ]
+}
